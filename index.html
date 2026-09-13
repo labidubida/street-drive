@@ -2083,7 +2083,8 @@ function makeTrafficCar(){
   };
 }
 function initTraffic(){
-  for(let i=0;i<Q.aiCars;i++) Traffic.cars.push(makeTrafficCar());
+  const count = Math.min(Q.aiCars, 8);
+for(let i=0;i<count;i++) Traffic.cars.push(makeTrafficCar());
 }
 const LANE_OFFSET = 2.9;
 function updateTrafficCar(car, dt, others){
